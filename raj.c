@@ -117,7 +117,7 @@ int main(int argc, char *argv[]) {
     // Default values
     const char *default_ip = "127.0.0.1";
     int default_port = 80;
-    int default_time = 600;
+    int default_time = 60;
     int default_threads = DEFAULT_THREAD_COUNT;
 
     // Parse command-line arguments
